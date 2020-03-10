@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="a.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <a href="https://icons8.com/icon/56592/jake"></a> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>
+            Project0
+        </title>
+    </head>
+    
+    <body>
+      <div id="app">
+        <nav  id="mainnavbar" class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ff2eb9;">
+            <a class="navbar-brand" href="#" @click="startHome" > <i class="fal fa-flower"></i>Areeg Fahad</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link"  href="#" @click="startHome">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" href="#" @click="startForm">Form</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" @click="startTable">Survy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" @click="startImage">Image</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" @click="startGame">OK</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <!-- <div class="container-fluid"> -->
+          <!-- <div class="container"> -->
+        <div class="row" id="padd">
+            <div class="col-2">
+                <div class="sidenav">
+                    <!-- <a href="1.html"><i class="fas fa-address-card"></i> Form</a> -->
+                    <a href="1.html"><i class="fas fa-address-card"></i> HTML1</a>
+                    <a href="2.html"><i class="fas fa-id-card-alt"></i> HTML2</a>
+                    <a href="3.html"><i class="fas fa-file-signature"></i> HTML3</a>
+                    <a href="4.html"><i class="fas fa-file-signature"></i> HTML4</a>
+                    <hr class="hr1">
+                    <div class="soso">
+                        <img src="./images/afr2.png" width="100px" height="100px">
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-10" v-if="home">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome to Areeg's first Project</h1>
+                <p class="lead"> This course picks up where Harvard University’s CS50 leaves off, diving more deeply into the design and implementation of web apps with Python, JavaScript, and SQL using frameworks like Flask, Django, and Bootstrap. Topics include database design, scalability, security, and user experience. Through hands-on projects, students learn to write and use APIs, create interactive UIs, and leverage cloud services like GitHub and Heroku. By semester’s end, students emerge with knowledge and experience in principles, languages, and tools that empower them to design and deploy applications on the Internet.<hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="2.html" role="button">Learn more</a>
+              </div>
+        </div>
+        <div class="col-10 django" v-else-if="table">
+          <h2 style="color: cornflowerblue;">Django</h2>
+          اليوم سوف نتكلم عن ال Django هيه framework مصصمه بلغه python
+اطلقت سنه 5002 سميت نسبه الى عازف القيثاره البلجيكي django
+Reinhardt وسبق وان شرحت شنو فكره ال framework الي هو بدال متكتب 00
+اسطر بلغه python ممكن انو تكتبها خالل line واحد فقط . مصصمه هاي
+ال framework علمود تصمم صفحات انترنيت بسهول وتطبيقات تعمل عل نت
+بسرعه وتكون ذات security عالي وايضا ال application الي تعتمد عل
+ database .. الفكره العامه من Django هيه مبنيه عل فكره ال MVT طبعا
+في تفستق 0.5 تكلم على angular الي جانت مبنيه عل MVC والكن ال
+ Django مبنيه عل ال mvt الي هو اختصار الى template view model
+ال model الي تحتوي ال database اما ال template الي تعرض هاي البيانات
+الصفحه عل ال user وال view الي هو يعتبر كجسر يربط ال template بال
+ model ويعمل filter لبيانات يعني مثال عندك بال database االلف من البيانات
+لفيديوات عل سبيل المثال . من خالل view تكدر تسويلهن filter يعني تصفيهن فقط
+الي مدتهن اكثر من 000 دقيقه تعرضها عل ال template لذالك فكره ال view هيه
+نفس فكره ال controller الي جانت تسخدم في ال angular الي كان مبني عل
+فكره ال Architecture mvc ..
+من اهم مميزات هاي framework انو هيه سهل بالبرمجه مثال لو كتبت برنامج
+معين بهاي لغه او سويت لشركه معينه برنامج مبني عل Django وجان ال staff
+يعني فريق العمل ترك الدعم لهاي شركه يكدر بكل سهوله يجب مجموعه اخرى
+ويكدرون يقرون كود ويفتهمونه ويعيدون صيانته او مثال واحد كتب برنامج وصل
+مرحله وتوكل الى دار حقه فبكل سهوله ممكن يجيب صاحب الشركه احد يعرف بي
+ويكمل شغله . مو مثل ال js node الي هيه معقده كتابتها معقد .
+من اهم عيوب ال Django انو هيه ماتسخدم في تطبيقات ال time Real
+ application مثل ال chatting وال conference وغيرها التطبيقات
+الي تحتاج الى time real . مثل ال nodejs بالتالي شغلك الي راح
+تعمله يعتمد عل حاجتك وشنو امكانياتك وعل ال application . من
+اشهر التطبيقات الي مبنيه عل هاي ال framework هيه instgram
+وتطبيق الصور الشهر ال pinterest وايضا ال Mozilla صاحبه متصفح
+ال firefox . وغيرها من التطبيقات .. من اشهر ال IDEالي ممكن تتعامل
+وياها معا ال Django هيه Pycharm JetBrains و JetBrains
+Pycharm و Atom وغيرها .السوال الي اجه في بالي هو كيف يقولون
+ان ال instgram مبني عل هاي framework معا العلم بيها chatting
+الي هو time real الجواب عل هل بحثت عليه ووجدته موجد في موقع
+كاتبين كيف عاملين ال instgram مستخدم لجزء الخاص بال time real
+فد library JavaScript اسمها io.socket هاي خاصه باالمور الي
+الها عالقه بال time real .ومالحظه ال io.socket اندمجت ويه
+ js Node وصارت بكت وحده ...وشكراا 
+
+<hr class="style-eight style-eight">
+
+<h2 style="color: cornflowerblue;">MongoDB</h2>
+ال mongoDB هيه نوع من انظمه اداره قواعد البيانات ) database
+ system management )تم بنائها سنه 9002 بواسطة لغه ++C ,C
+ javascript ,سميت بالبدايه p بعدين شافوا اسم غير جيد باالخير اطلقوا عليها
+ mongo اختصار الى كلمه العمالق humongous يعني database عمالقه .
+فكره ال mongo هيه اداره الى ال data بشكل غير عالئقي يعني التنتمي الى النوع
+الي يعتمد عل اداره البيانات مثل ال MySQL الي تسمى Relationship
+ database بينما ال mongo هيه نوع من انواع ال غير عالئقي يطلق عليها
+ database Relationship non . في ال MySQL البيانات ترتب عل شكل
+جداول وصفوف واعمد )row, column, Table )في ال mongoDB هنالك
+مصطالت تقابل مصطلحات ال MySQL الي هيه
+من اهم مميزات ال mongoBD السرعه مثال لو اضفت 1000 صف في
+ال MySQL سوف تحتاج الى 3 دقايق اما في حاله ال mongoDB
+فانت تحتاج فقط الى 9 ثواني . من مميزات االخرى ل mongo هيه
+ال dynamic مثال في MySQL لو اردت تضيف حقل جديد ) column
+( لشخص واحد وتحط قيمه مثال شخص رقم 93 في ال database حطيت
+اله قيمه عل سبيل مثال حقل خاص بشي مميز مثال اعسر اليد راح يخلق مكان
+لكل االشخاص الموجودين بهاي ال database مكان ويبقى فارغ اذا لم
+توضع فيه قيمه اما في ال mongo ممكن فقط لشخص تخلق column
+وتكون حاويه عل قيمه معينه وميحتاج تخلق لكل مكان خاص بهاي الصفه
+لجميع يعني x من االشخاص بياناته تحتوي عل 7 حقول اما شخص اخر في
+MySQL MongoBD
+Table Collection
+Column Field
+Row Document 
+نفس الcollection =table عنده فقط 6 حقول في mysql البد الكل عدهم نفس
+عدد الحقول . الميزه االخرى هيه ال sharing يستخدم خاصيه المشاركه البيانات
+عل اكثر من جه وكل جه تكدر تاخذ البيانات مال جه االخرى اعتمادا عل خاصيه ال
+Scaling Horizontal . اكو نوعين من ال Scaling النوع االول هوه Horizontal
+والنوع االخرى هو الVertical . الفكره منهم انو في حاالت السستم مثال يدعم 6222
+user وفجاه صار السستم الطلب عليه اكثر من 6222 بالتالي اذا كان يستخدم خاصيه
+Scaling Vertical يعني الحل لمشكله ال load هيه عن طريق استخدام server
+ذات مواصفات عاليه جدا و ram ايضا ذات سعه اعال بالنسبه ال ال mongo
+يستخدم خاصيه ال Scaling Horizontal الي هيه من يزاد ال load عل النظام
+يتم الحل عن طريق توفير اكثر من server يعني نظام ال data distributing
+machines multiple across يعني يوزع البيانات عل اكثر من server هاي راح
+توفر خاصيه ذا تعرض اي جزء من النظام ال مشكله راح يحول ال traffic ال
+الجزء االخر من النظام بالتالي availability عالي جداا .بينما ال MySQL هيه
+نوع ال scaling vertical . من مميزاته ايضا هيه تعمل معا ال js node النها
+مصصمه عن طريق javascript .وايضا سهله اكثر من MySQL من االمثله عليها
+ال twitter و sony وغيرها .. العالم ليش ميتوجهون الها الن بعدها في طور
+التكوين وايضا االنظمه القديمه الها تاريخ اطول لذالك الدعم الموجود اذا تعرضوا
+ال مشاكل اكثر من mongo والكن خالل الفتره القادمه يتوقع العالم ان يتجه الها .
+
+
+
+
+
+
+ 
+      </div>
+
+      <div class="col-10" v-else-if="forrm">
+        <section id="cover" class="min-vh-100">
+          <div id="cover-caption">
+              <div class="container">
+                  <div class="row text-white">
+                      <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                          <h1 class="display-4 py-2 text-truncate">Center my form.</h1>
+                          <div class="px-2">
+                              <form action="" class="justify-content-center">
+                                  <div class="form-group">
+                                      <label class="sr-only">Name</label>
+                                      <input type="text" class="form-control" placeholder="Jane Doe">
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="sr-only">Email</label>
+                                      <input type="text" class="form-control" placeholder="jane.doe@example.com">
+                                  </div>
+                                  <button type="#" class="btn btn-primary btn-lg">Launch</button>
+                              </form>
+            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      </div>
+      <div class="col-10" v-else>
+        <h1 style="padding: 30px;">Welcom to our page baby!</h1>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>List Group With Contextual Classes</h2>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-secondary">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-info">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-warning">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-danger">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-primary">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-dark">Areeg Fahad</li>
+          <li class="list-group-item list-group-item-light">Areeg Fahad</li>
+        </ul>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    </body>
+    <script>
+      var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    forrm:false,
+    table:false,
+    image:false,
+    gmae:false,
+    home:false
+
+  },
+  methods:{
+    startHome:function(){
+      this.home=true;
+      this.forrm=false;
+      this.gmae=false;
+      this.table=false;
+      this.image=false;
+
+
+    },
+    startForm:function(){
+      this.home=false;
+      this.forrm=true;
+      this.gmae=false;
+      this.table=false;
+      this.image=false;
+
+    },
+    startTable:function(){
+      this.home=false;
+      this.forrm=false;
+      this.gmae=false;
+      this.table=true;
+      this.image=false;
+
+    },
+    startImage:function(){
+      this.home=false;
+      this.forrm=false;
+      this.gmae=false;
+      this.table=false;
+      this.image=true;
+
+    },
+    startGame:function(){
+      this.home=false;
+      this.forrm=false;
+      this.gmae=true;
+      this.table=false;
+      this.image=false;
+
+    }
+  }
+});
+      </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,22 @@
+$color:rgb(49, 54, 49);
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    color: $color;
+    background-color: red;
+     h6{
+         color: $color;
+
+    }
+}
+
+
+
+.okkky {
+    @extend %message;
+    background-color: green;
+}
